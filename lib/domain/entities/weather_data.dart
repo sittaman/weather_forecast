@@ -1,13 +1,13 @@
 import 'package:equatable/equatable.dart';
 
-class CurrentWeather extends Equatable {
+class WeatherData extends Equatable {
   final double? temp;
   final double? tempMin;
   final double? tempMax;
   final DateTime? timestamp;
   final String? locationName;
 
-  const CurrentWeather({
+  const WeatherData({
     this.temp,
     this.tempMin,
     this.tempMax,

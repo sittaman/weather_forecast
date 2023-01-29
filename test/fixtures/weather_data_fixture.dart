@@ -1,6 +1,6 @@
 import 'package:weather_forecast/data/models/current_weather_model.dart';
 
-class CurrentWheaterFixture {
+class WeatherDataFixture {
   static final entity = CurrentWeatherModel(
     temp: 21.47,
     tempMax: 23.7,

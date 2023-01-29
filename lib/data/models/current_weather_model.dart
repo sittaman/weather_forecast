@@ -1,6 +1,6 @@
-import 'package:weather_forecast/domain/entities/current_weather.dart';
+import 'package:weather_forecast/domain/entities/weather_data.dart';
 
-class CurrentWeatherModel extends CurrentWeather {
+class CurrentWeatherModel extends WeatherData {
   const CurrentWeatherModel({
     double? temp,
     double? tempMin,
