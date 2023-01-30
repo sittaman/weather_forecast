@@ -10,7 +10,7 @@ abstract class WeatherDataDataSource {
 }
 
 class WeatherDataDataSourceImpl implements WeatherDataDataSource {
-  WeatherDataDataSourceImpl({required this.client});
+  WeatherDataDataSourceImpl(this.client);
 
   final Dio client;
 
@@ -18,12 +18,12 @@ class WeatherDataDataSourceImpl implements WeatherDataDataSource {
   Future<WeatherData> getCurrentWeather(double lat, double lon) async {
     try {
       final r = await client.get(
-        '${AppConfig.openWeatherApiEndpoint}/weather',
+        '$openWeatherApiEndpoint/weather',
         queryParameters: {
           'lat': lat,
           'lon': lon,
           'units': 'metric',
-          'appid': AppConfig.openWeatherApiKey,
+          'appid': openWeatherApiKey,
         },
       );
 
