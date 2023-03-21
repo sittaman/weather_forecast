@@ -5,12 +5,12 @@ import 'package:weather_forecast/app_config.dart';
 import 'package:weather_forecast/data/models/current_weather_model.dart';
 import 'package:weather_forecast/domain/entities/weather_data.dart';
 
-abstract class WeatherDataDataSource {
+abstract class WeatherDataRemoteDataSource {
   Future<WeatherData> getCurrentWeather(double lat, double lon);
 }
 
-class WeatherDataDataSourceImpl implements WeatherDataDataSource {
-  WeatherDataDataSourceImpl(this.client);
+class WeatherDataRemoteDataSourceImpl implements WeatherDataRemoteDataSource {
+  WeatherDataRemoteDataSourceImpl(this.client);
 
   final Dio client;
 

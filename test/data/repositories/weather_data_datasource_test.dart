@@ -2,12 +2,12 @@ import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http_mock_adapter/http_mock_adapter.dart';
 import 'package:weather_forecast/app_config.dart';
-import 'package:weather_forecast/data/datasources/weather_data_datasource.dart';
+import 'package:weather_forecast/data/datasources/weather_data_remote_datasource.dart';
 
 import '../../fixtures/weather_data_fixture.dart';
 
 void main() {
-  late WeatherDataDataSourceImpl datasource;
+  late WeatherDataRemoteDataSourceImpl datasource;
   late Dio dio;
   late DioAdapter dioAdapter;
 
@@ -18,7 +18,7 @@ void main() {
     dio = Dio();
     dioAdapter = DioAdapter(dio: dio);
     dio.httpClientAdapter = dioAdapter;
-    datasource = WeatherDataDataSourceImpl(dio);
+    datasource = WeatherDataRemoteDataSourceImpl(dio);
   });
 
   test('GetWeatherData', () async {
