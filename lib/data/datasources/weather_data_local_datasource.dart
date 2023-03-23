@@ -1,13 +1,11 @@
 import 'dart:convert';
 
-import 'package:dio/dio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:weather_forecast/app_config.dart';
 import 'package:weather_forecast/data/models/current_weather_model.dart';
 import 'package:weather_forecast/domain/entities/weather_data.dart';
 
 abstract class WeatherDataLocalDataSource {
-  Future<WeatherData> getLastWeatherData(double lat, double lon);
+  Future<WeatherData> getLastWeatherData();
 }
 
 class WeatherDataLocalDataSourceImpl implements WeatherDataLocalDataSource {
@@ -16,10 +14,10 @@ class WeatherDataLocalDataSourceImpl implements WeatherDataLocalDataSource {
   final SharedPreferences sharedPreferences;
 
   @override
-  Future<WeatherData> getLastWeatherData(double lat, double lon) async {
+  Future<WeatherData> getLastWeatherData() async {
     try {
       final r = sharedPreferences.getString('cached_weather_data');
-      if (r.isEmpty) {
+      if (r!.isEmpty) {
         throw Exception();
       }
 
