@@ -1,16 +1,30 @@
 # weather_forecast
+## 1. Task
 
-A new Flutter project.
+Build an app for one platform (Android or iOS) to track weather in a fashion manner for a rock'n'roll band staff.
 
-## Getting Started
+The band staff needs to track the current weather and the forecast for the 5 next days of the main cities where shows of the tour are taking place:
 
-This project is a starting point for a Flutter application.
+- Silverstone, UK
+- São Paulo, Brazil
+- Melbourne, Australia
+- Monte Carlo, Monaco
 
-A few resources to get you started if this is your first Flutter project:
+## 2. Requirements
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The app must contemplate the following requirements:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Have two screens
+- Current weather
+- Forecast for the next 5 days
+- The concerts list must display the city name and provide a search field in the top (find by city name)
+- Must work offline (will be tested with airplane mode)
+- Must support multiple resolutions and sizes
+
+### 2.1. Weather retrieval
+
+You must use the [OpenWeather](https://openweathermap.org) API. You can create a [free account](https://home.openweathermap.org/users/sign_up) and get your [API key](https://home.openweathermap.org/api_keys).
+
+API documentation:
+- https://openweathermap.org/current
+- https://openweathermap.org/forecast

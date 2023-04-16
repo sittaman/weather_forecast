@@ -18,6 +18,8 @@ dependencies:
   http_mock_adapter: ^0.3.3
   shared_preferences: ^2.0.18
   connectivity_plus: ^3.0.3
+  bloc: ^8.1.1
+  flutter_bloc: ^8.1.2
 
 dev_dependencies:
   flutter_test:
